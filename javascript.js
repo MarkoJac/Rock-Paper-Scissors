@@ -44,11 +44,20 @@ let computerScore = 0
 // Name the winner
 // Increment scores
 
-function playRound(humanChoice, computerChoice) {
-    
-    const win = "You win!";
-    const loss = "Sorry, you lose!";
-    const draw = "It's a draw!";
+function playGame() {
+
+    function playRound() {
+        
+        const humanSelectionRaw = getHumanChoice();
+        const humanSelection = humanSelectionRaw.toUpperCase();
+        const computerSelection = getComputerChoice();
+
+        // let humanScore = 0;
+        // let computerScore = 0;
+
+        const win = "You win!";
+        const loss = "Sorry, you lose!";
+        const draw = "It's a draw!";
     
     let result = (humanSelection == 'ROCK' && computerSelection == 'ROCK') ? draw :
         (humanSelection == 'ROCK' && computerSelection == 'PAPER') ? loss :
@@ -72,10 +81,26 @@ function playRound(humanChoice, computerChoice) {
         }
 
         console.log(humanScore + ":" + computerScore)
+
     }
-    
-    const humanSelectionRaw = getHumanChoice();
-    const humanSelection = humanSelectionRaw.toUpperCase();
-    const computerSelection = getComputerChoice();
-    
-playRound(humanSelection, computerSelection);
+    playRound();
+}
+
+for (let i = 0; i < 5; i++) {
+    playGame()        
+    }
+
+function resultsOfGame() {
+    if (humanScore > computerScore) {
+        console.log("Congratulations, you won!");
+    }
+
+    else if (humanScore = computerScore) {
+        console.log("It's a draw!");
+    }
+
+    else { 
+        console.log("You lost :(");
+    }
+}
+resultsOfGame()
