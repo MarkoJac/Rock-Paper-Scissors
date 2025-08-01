@@ -21,3 +21,13 @@ function getComputerChoice() {
     console.log("Scissors");
    }
 }
+
+// Human Choice
+
+// prompt the input of rock, paper, or scissors from user
+// print user choice to log
+
+function getHumanChoice() {
+
+   return prompt("Rock, Paper, Scissors, Shoot!", "Rock");
+}
