@@ -61,7 +61,17 @@ function playRound(humanChoice, computerChoice) {
         (humanSelection == 'SCISSORS' && computerSelection == 'SCISSORS') ? draw :
         '' ; 
         
-        console.log(result)    
+        console.log(result)  
+        
+        if (result == win) {
+            ++humanScore;
+        }
+
+        else if (result == loss) {
+            ++computerScore;
+        }
+
+        console.log(humanScore + ":" + computerScore)
     }
     
     const humanSelectionRaw = getHumanChoice();
