@@ -46,9 +46,9 @@ let computerScore = 0
 
 function playRound(humanChoice, computerChoice) {
     
-    const win = "You win!"
-    const loss = "Sorry, you lose!"
-    const draw = "It's a draw!"
+    const win = "You win!";
+    const loss = "Sorry, you lose!";
+    const draw = "It's a draw!";
 
     let result = (humanChoice == 'ROCK' && computerChoice == 'ROCK') ? draw :
         (humanChoice == 'ROCK' && computerChoice == 'PAPER') ? loss :
@@ -60,6 +60,9 @@ function playRound(humanChoice, computerChoice) {
         (humanChoice == 'SCISSORS' && computerChoice == 'PAPER') ? win :
         (humanChoice == 'SCISSORS' && computerChoice == 'SCISSORS') ? draw :
         
-    console.log(result)
-        
+    console.log(result)    
 }
+
+const humanSelectionRaw = getHumanChoice();
+const humanSelection = humanSelectionRaw.toUpperCase()
+const computerSelection = getComputerChoice()
