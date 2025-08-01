@@ -10,15 +10,15 @@ function getComputerChoice() {
    let x = Math.floor(Math.random() * 3 + 1)
    
    if (x == 1) {
-    console.log("ROCK");
+    return "ROCK";
    }
 
    else if (x == 2) {
-    console.log("PAPER");
+    return "PAPER";
    }
 
    else {
-    console.log("SCISSORS");
+    return "SCISSORS";
    }
 }
 
@@ -49,20 +49,23 @@ function playRound(humanChoice, computerChoice) {
     const win = "You win!";
     const loss = "Sorry, you lose!";
     const draw = "It's a draw!";
-
-    let result = (humanChoice == 'ROCK' && computerChoice == 'ROCK') ? draw :
-        (humanChoice == 'ROCK' && computerChoice == 'PAPER') ? loss :
-        (humanChoice == 'ROCK' && computerChoice == 'SCISSORS') ? win :
-        (humanChoice == 'PAPER' && computerChoice == 'ROCK') ? win :
-        (humanChoice == 'PAPER' && computerChoice == 'PAPER') ? draw :
-        (humanChoice == 'PAPER' && computerChoice == 'SCISSORS') ? loss :
-        (humanChoice == 'SCISSORS' && computerChoice == 'ROCK') ? loss :
-        (humanChoice == 'SCISSORS' && computerChoice == 'PAPER') ? win :
-        (humanChoice == 'SCISSORS' && computerChoice == 'SCISSORS') ? draw :
+    
+    let result = (humanSelection == 'ROCK' && computerSelection == 'ROCK') ? draw :
+        (humanSelection == 'ROCK' && computerSelection == 'PAPER') ? loss :
+        (humanSelection == 'ROCK' && computerSelection == 'SCISSORS') ? win :
+        (humanSelection == 'PAPER' && computerSelection == 'ROCK') ? win :
+        (humanSelection == 'PAPER' && computerSelection == 'PAPER') ? draw :
+        (humanSelection == 'PAPER' && computerSelection == 'SCISSORS') ? loss :
+        (humanSelection == 'SCISSORS' && computerSelection == 'ROCK') ? loss :
+        (humanSelection == 'SCISSORS' && computerSelection == 'PAPER') ? win :
+        (humanSelection == 'SCISSORS' && computerSelection == 'SCISSORS') ? draw :
+        '' ; 
         
-    console.log(result)    
-}
-
-const humanSelectionRaw = getHumanChoice();
-const humanSelection = humanSelectionRaw.toUpperCase()
-const computerSelection = getComputerChoice()
+        console.log(result)    
+    }
+    
+    const humanSelectionRaw = getHumanChoice();
+    const humanSelection = humanSelectionRaw.toUpperCase();
+    const computerSelection = getComputerChoice();
+    
+playRound(humanSelection, computerSelection);
