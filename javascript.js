@@ -31,3 +31,8 @@ function getHumanChoice() {
 
    return prompt("Rock, Paper, Scissors, Shoot!", "Rock");
 }
+
+// Declare Player Scores
+ 
+let humanScore = 0
+let computerScore = 0
