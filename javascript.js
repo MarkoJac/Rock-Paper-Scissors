@@ -6,17 +6,18 @@
 // print choice to log
 
 function getComputerChoice() {
-   let x = Math.floor(Math.random() * 3 + 1);
 
-   if (x = 1) {
-    console.log("Rock")
+   let x = Math.floor(Math.random() * 3 + 1)
+   
+   if (x == 1) {
+    console.log("Rock");
    }
 
-   else if (x = 2) {
-    console.log("Paper")
+   else if (x == 2) {
+    console.log("Paper");
    }
 
    else {
-    console.log("Scissors")
+    console.log("Scissors");
    }
 }
